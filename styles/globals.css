@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #ffefbd;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.headlessui-popover-button-1:focus {
+  outline: none;
+  right: 1.25rem;
+}
+
+.navbar {
+  max-width: 320px;
+}
+
+.layout {
+  max-width: 2000px;
+}
+
+.us-state-map {
+  height: 200px
+}
+
+@media (min-width: 768px) {
+  .us-state-map {
+    height: 593px;
+  }
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.homeMap {
+  width: 100%;
+  height: 20rem;
+}
+
+@screen md {
+  .homeMap {
+    height: 100rem;
+  }
+}
