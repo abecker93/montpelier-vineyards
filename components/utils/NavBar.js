@@ -3,14 +3,17 @@ import Link from 'next/link'
 import { Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/solid'
 
+import Layout from './Layout'
+
 const NavBar = (props) => {
 
     const [showMenu, setShowMenu] = useState(false)
 
     return (
         <React.Fragment>
+            <Layout>
             <div
-                className="py-5 lg:px-16 flex items-stretch content-center"
+                className="py-5 flex items-stretch content-center"
             >
                 <div
                     className="flex items-stretch content-center xl:justify-between"
@@ -144,6 +147,7 @@ const NavBar = (props) => {
                     <h4
                         className="text-center text-lg xl:text-2xl 2xl:text-3xl text-marv"
                     >“Healthy soil, vigorous vines, spirited wines”</h4>
+            </Layout>
         </React.Fragment>
     )
 }
