@@ -81,7 +81,10 @@ const Footer = () => {
                                 </div>
                         </div>
                         <div className="pt-5 lg:pt-0">
-                            <Contact/>
+                            {/* <Contact/> */}
+                            <div
+                                className="text-center text-xl text-marv"
+                            >Contact us via dkbecker@montpeliervineyards.com</div>
                         </div>
                     </section>
                     <section
