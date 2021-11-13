@@ -9,13 +9,11 @@ const NavBar = (props) => {
 
     const [showMenu, setShowMenu] = useState(false)
 
-    // console.log("showMenu")
-
     return (
         <React.Fragment>
-            {/* <Layout> */}
+            <Layout>
             <div
-                className="py-5 lg:px-16 flex items-stretch content-center"
+                className="py-5 flex items-stretch content-center"
             >
                 <div
                     className="flex items-stretch content-center xl:justify-between"
@@ -61,7 +59,7 @@ const NavBar = (props) => {
                                 >About</a>
                             </Link>
                             <Link
-                                href="/shop-now"
+                                href="https://vinoshipper.com/shop/montpelier_vineyards_llc"
                             >
                                 <a
                                     className="pl-5 lg:pl-10"
@@ -99,7 +97,6 @@ const NavBar = (props) => {
                                     leaveTo="opacity-0 translate-y-1"
                                 >
                                     <div
-                                        // className="absolute z-30 mt-5 sm:mt-10 w-72 -right-1 xs:right-6 xsm:right-12 sm:right-1/3"
                                         className="relative mx-auto w-[320px]"
                                     >
                                         <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 mx-10">
@@ -135,7 +132,7 @@ const NavBar = (props) => {
                                                     </li>
                                                     <li className="pt-3">
                                                         <Link
-                                                            href="/shop-now"
+                                                            href="https://vinoshipper.com/shop/montpelier_vineyards_llc"
                                                         >
                                                             <a>Shop Now</a>
                                                         </Link>
@@ -150,7 +147,7 @@ const NavBar = (props) => {
                     <h4
                         className="text-center text-lg xl:text-2xl 2xl:text-3xl text-marv"
                     >“Healthy soil, vigorous vines, spirited wines”</h4>
-            {/* </Layout> */}
+            </Layout>
         </React.Fragment>
     )
 }
