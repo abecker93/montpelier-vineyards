@@ -10,10 +10,10 @@ const Footer = () => {
             <section className="bg-brown bottom-0 w-full py-8">
                 <Layout>
                     <section
-                        className="grid lg:grid-cols-2"
+                        className="grid lg:grid-cols-2 justify-center place-items-center lg:place-items-start"
                     >
                         <div>
-                        <div className="flex items-center">
+                        <div className="flex items-center ml-5 lg:ml-0">
                             <Link
                                 href="http://www.facebook.com/MontpelierVineyards"
                             >
@@ -69,7 +69,7 @@ const Footer = () => {
                                 </div>
                             </div>
                                 <div 
-                                    className="text-seaweed pt-5"
+                                    className="hidden md:block text-center lg:text-left text-seaweed pt-5"
                                 >
                                     Montpelier Vineyards
                                     <br/>
@@ -80,10 +80,21 @@ const Footer = () => {
                                     802-522-4479
                                 </div>
                         </div>
-                        <div className="pt-5 lg:pt-0">
+                        <div className="pt-5 lg:pt-0 w-full">
                             {/* <Contact/> */}
+                            <div 
+                                    className="block md:hidden text-center lg:text-left text-seaweed pt-5"
+                                >
+                                    Montpelier Vineyards
+                                    <br/>
+                                    2446 Elm Street
+                                    <br/>
+                                    Montpelier, Vermont 05602
+                                    <br/>
+                                    802-522-4479
+                                </div>
                             <div
-                                className="text-center text-xl text-marv"
+                                className="text-center lg:text-right md:text-xl text-marv"
                             >Contact us via dkbecker@montpeliervineyards.com</div>
                         </div>
                     </section>
