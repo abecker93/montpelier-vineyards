@@ -152,7 +152,7 @@ const Footer = () => {
                     <div
                         className="text-black text-center font-normal pt-5"
                     >
-                        ©Montpelier Vineyards 2021
+                        ©Montpelier Vineyards 2022
                     </div>
                 </Layout>
             </section>
