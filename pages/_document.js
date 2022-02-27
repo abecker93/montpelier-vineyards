@@ -7,6 +7,8 @@ const MyDocument = () => {
     return (
         <Html lang="en">
             <Head>
+                <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+                <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
                 <meta property="og:title" content="Montpelier Vineyards" key="title" />
                 <link rel="icon" href="/mv_wine_favicon.svg" />
                 <link

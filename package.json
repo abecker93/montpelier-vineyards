@@ -16,6 +16,7 @@
     "graphql-request": "^3.5.0",
     "leaflet": "^1.7.1",
     "next": "11.1.2",
+    "nodemailer": "^6.7.2",
     "react": "17.0.2",
     "react-cool-dimensions": "^2.0.7",
     "react-dom": "17.0.2",

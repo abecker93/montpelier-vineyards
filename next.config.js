@@ -4,5 +4,5 @@ module.exports = {
       'media.graphcms.com',
     ]
   },
-  reactStrictMode: true,
+  // reactStrictMode: true,
 }

@@ -1,10 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Layout from './Layout'
-import Contact from '../forms/Contact'
+// import Contact from '../forms/Contact'
+// import NewForm from '../forms/NewForm'
 import Link from 'next/link'
 
 const Footer = () => {
 
+    const [ formFields, setFormFields ] = useState({
+        name: '',
+        email: '',
+        message: ''
+    })
+
+    const {
+        name,
+        email,
+        message
+    } = formFields
+
+    const submitHandler = (e) => {
+        console.log('hello')
+        e.preventDefault()
+
+    }
 
     return (
             <section className="bg-brown bottom-0 w-full py-8">
@@ -94,12 +112,19 @@ const Footer = () => {
                                     802-522-4479
                                 </div>
                             <div
-                                className="text-center lg:text-right md:text-xl text-marv"
-                            >Contact us via dkbecker@montpeliervineyards.com</div>
+                                className="text-center lg:text-left md:text-xl text-marv pt-5"
+                            >
+                                <a
+                                    className="mt-5 md:mt-0 md:ml-5 py-4 px-8 h-10 rounded-xl bg-marv text-beige"
+                                    href="mailto:dkbecker@montpeliervineyards.com"
+                                >
+                                    Contact us!
+                                </a>
+                            </div>
                         </div>
                     </section>
                     <section
-                        className="grid md:grid-cols-5 items-center justify-items-center md:pt-5"
+                        className="grid md:grid-cols-6 items-center justify-items-center md:pt-5"
                     >
                         <div></div>
                         <Link
@@ -146,7 +171,22 @@ const Footer = () => {
                                 alt="Vermont Certified Organic logo"
                                 />
                             </a>
-                        </Link>
+                    </Link>
+                    <Link
+                        href="https://www.realorganicproject.org/"
+                    >
+                        <a 
+                            target="_blank"
+                            alt="Real Organic Project"
+                            rel="noreferrer noopener"
+                        >
+                            <img
+                            src="/rop-logo-regular.png"
+                            className="w-20 pt-5 md:pt-0"
+                            alt="Real Organic Project"
+                            />
+                        </a>
+                    </Link>
                         <div></div>
                     </section>
                     <div
