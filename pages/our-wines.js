@@ -100,6 +100,7 @@ const OurWines = (props) => {
                                             className="bg-marv text-beige py-1.5 2xl:py-2 px-4 rounded-full text-lg 2xl:text-2xl"
                                             href={wine?.techSheet?.url}
                                             target="_blank"
+                                            rel="noreferrer noopener"
                                         >Download the tech sheet</a>
                                     </div>
                                 </div>
