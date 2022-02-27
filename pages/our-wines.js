@@ -30,7 +30,6 @@ const OurWines = (props) => {
                     className="pt-16 grid grid-cols-1 lg:grid-cols-2 gap-16 pb-20"
                 >
                     {wines?.map((wine) => {
-                        console.log(wine)
                         return (
                             <>
                                 <div className="items-stretch">
@@ -84,24 +83,34 @@ const OurWines = (props) => {
                                                 {wine?.winemakingNotes}
                                             </span>
                                     </div>
-                                        <div
-                                            className="pt-1 text-marv font-bold leading-8"
+                                    <div
+                                        className="pt-1 text-marv font-bold leading-8"
+                                    >
+                                        Tasting notes:
+                                        <span
+                                            className="ml-1 text-black font-normal"
                                         >
-                                            Tasting notes:
-                                            <span
-                                                className="ml-1 text-black font-normal"
-                                            >
-                                                {wine?.tastingNotes}
-                                            </span>
-                                        </div>
+                                            {wine?.tastingNotes}
+                                        </span>
+                                    </div>
+                                    <div
+                                        className="pt-2"
+                                    >
+                                        <a
+                                            className="bg-marv text-beige py-1.5 2xl:py-2 px-4 rounded-full text-lg 2xl:text-2xl"
+                                            href={wine?.techSheet?.url}
+                                            target="_blank"
+                                            rel="noreferrer noopener"
+                                        >Download the tech sheet</a>
+                                    </div>
                                 </div>
-                                {/* <div className="self-center">
+                                <div className="self-center">
                                     <img
                                         src={wine?.wineImage?.url}
                                         className="mx-auto h-96"
                                         alt={wine?.wineName}
                                     />
-                                </div> */}
+                                </div>
                             </>
                         )
                     })}
@@ -131,6 +140,9 @@ export async function getServerSideProps(context) {
                     url
                 }
                 organicBool
+                techSheet {
+                    url
+                }
             }
         }`
 
