@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/utils/Layout'
 import { gql, GraphQLClient } from 'graphql-request'
+import cx from 'classnames'
 
 const OurWines = (props) => {
 
@@ -29,12 +30,26 @@ const OurWines = (props) => {
                     className="pt-16 grid grid-cols-1 lg:grid-cols-2 gap-16 pb-20"
                 >
                     {wines?.map((wine) => {
+                        console.log(wine)
                         return (
                             <>
                                 <div className="items-stretch">
-                                    <h4
-                                        className="text-marv text-xl"
-                                    >{wine?.wineName}</h4>
+                                    <div
+                                        className="flex items-stretch"
+                                    >
+                                        {wine.organicBool && (
+                                            <img
+                                                src="vt-certified-organic.gif"
+                                                className="w-12 h-12 self-center"
+                                                alt={wine?.wineName + "- Certified Organic"}
+                                            />
+                                        )}
+                                        <h4
+                                            className={cx("text-marv text-xl self-center", {
+                                                ['pl-4']: wine?.organicBool
+                                            })}
+                                        >{wine?.wineName}</h4>
+                                    </div>
                                     <div
                                         className="pt-2 flex"
                                     >
@@ -115,6 +130,7 @@ export async function getServerSideProps(context) {
                 wineImage {
                     url
                 }
+                organicBool
             }
         }`
 
