@@ -85,12 +85,12 @@ const WhereToBuy = (props) => {
                     <h2
                         className="text-center text-marv text-3xl py-2 leading-10"
                     >
-                        We can now ship our wines to 37 states!
+                        We can now ship our wines to 38 states!
                     </h2>
                     <div
                         className="text-center font-normal text-lg text-black leading-8"
                     >
-                        Alaska, Arizona, Colorado, Washington DC, Florida, Georgia, Hawaii, Iowa, Idaho, Illinois, Indiana, Kansas, Louisiana, Massachusetts, Maryland, Maine, Minnesota, Missouri, North Carolina, North Dakota, Nebraska, New Hampshire, New Mexico, Nevada, New York, Ohio, Oklahoma, Oregon, Pennsylvania, South Carolina, Tennessee, Texas, Virginia, Washington, Wisconsin, West Virginia, Wyoming
+                        Alaska, Arizona, Colorado, Washington DC, Florida, Georgia, Hawaii, Iowa, Idaho, Illinois, Indiana, Kansas, Kentucky, Louisiana, Massachusetts, Maryland, Maine, Minnesota, Missouri, North Carolina, North Dakota, Nebraska, New Hampshire, New Mexico, Nevada, New York, Ohio, Oklahoma, Oregon, Pennsylvania, South Carolina, Tennessee, Texas, Virginia, Washington, Wisconsin, West Virginia, Wyoming
                     </div>
                     <div
                         className="flex lg:justify-center lg:py-10"
