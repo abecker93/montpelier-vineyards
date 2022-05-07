@@ -148,8 +148,6 @@ export async function getServerSideProps(context) {
 
     const data = await client.request(query)
 
-    // const wines = data.wines
-
     return {
         props: data
     }

@@ -2,12 +2,14 @@
    
 import React from 'react';
 import Layout from '../components/utils/Layout'
+import { gql, GraphQLClient } from 'graphql-request'
+import cx from 'classnames'
 
 const Tastings = (props) => {
 
     const {
         events
-    } = props;
+    } = props
 
     return (
         <React.Fragment>
@@ -41,16 +43,16 @@ const Tastings = (props) => {
                                         >{event?.eventTitle}</h4>
                                     </div>
                                     <div
-                                        className="pt-2 flex"
+                                        className="pt-2"
                                     >
-                                        <div className="text-marv font-bold leading-8 flex">Location:
+                                        <div className="text-marv font-bold leading-8 flex">Description:
                                             <p
                                                 className="ml-1 text-black font-normal"
                                             >
-                                                {event?.description}
+                                                {event?.eventDescription}
                                             </p>
                                         </div>
-                                        <div className="ml-1 text-marv font-bold leading-8 flex">Address:
+                                        <div className="text-marv font-bold leading-8 flex">Address:
                                             <p
                                                 className="ml-1 text-black font-normal"
                                             >
@@ -61,7 +63,7 @@ const Tastings = (props) => {
                                         <div className="pt-1 text-marv font-bold leading-8">
                                             Date and Time:
                                             <span className="ml-1 text-black font-normal">
-                                                {wine?.dateAndTime}
+                                                {event?.dateAndTime}
                                             </span>
                                         </div>
                                 </div>
@@ -81,13 +83,12 @@ export async function getServerSideProps(context) {
 
     const query = gql`
         query {
-           events {
-             address
-             eventDescription
-             eventTitle
-             dateAndTime
-           }
-         }
+            events {
+                eventTitle
+                eventDescription
+                dateAndTime
+                address
+            }
         }`
 
     const data = await client.request(query)
@@ -95,6 +96,6 @@ export async function getServerSideProps(context) {
     return {
         props: data
     }
-  }
+}
 
 export default Tastings
