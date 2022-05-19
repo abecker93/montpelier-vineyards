@@ -59,12 +59,12 @@ const WhereToBuy = (props) => {
                     <h2
                         className="text-center text-marv text-3xl py-2 leading-10"
                     >
-                        Local wine pick-up and delivery available!
+                        Local wine pick-up available!
                     </h2>
                     <div
                         className="text-center font-normal text-lg text-black leading-8"
                     >
-                        If you would like to order wine for pick up here at the winery or have it delivered locally, click on the buy wine button choose pick-up or local delivery
+                        If you would like to order wine for pick up here at the winery, click on the buy wine button choose pick-up
                     </div>
                     <Link
                         href="https://vinoshipper.com/shop/montpelier_vineyards_llc"
@@ -85,12 +85,12 @@ const WhereToBuy = (props) => {
                     <h2
                         className="text-center text-marv text-3xl py-2 leading-10"
                     >
-                        We can now ship our wines to 38 states!
+                        We can now ship our wines to 39 states!
                     </h2>
                     <div
                         className="text-center font-normal text-lg text-black leading-8"
                     >
-                        Alaska, Arizona, Colorado, Washington DC, Florida, Georgia, Hawaii, Iowa, Idaho, Illinois, Indiana, Kansas, Kentucky, Louisiana, Massachusetts, Maryland, Maine, Minnesota, Missouri, North Carolina, North Dakota, Nebraska, New Hampshire, New Mexico, Nevada, New York, Ohio, Oklahoma, Oregon, Pennsylvania, South Carolina, Tennessee, Texas, Virginia, Washington, Wisconsin, West Virginia, Wyoming
+                        Alaska, Arizona, Colorado, Washington DC, Florida, Georgia, Hawaii, Iowa, Idaho, Illinois, Indiana, Kansas, Kentucky, Louisiana, Massachusetts, Maryland, Maine, Michigan, Minnesota, Missouri, North Carolina, North Dakota, Nebraska, New Hampshire, New Mexico, Nevada, New York, Ohio, Oklahoma, Oregon, Pennsylvania, South Carolina, Tennessee, Texas, Virginia, Washington, Wisconsin, West Virginia, Wyoming
                     </div>
                     <div
                         className="flex lg:justify-center lg:py-10"
@@ -121,7 +121,7 @@ const WhereToBuy = (props) => {
                                 When you place your order you will receive a confirmation of your order and payment from VinoShipper. Once your order has shipped, you will receive an additional notification with tracking information.
                             </li>
                             <li>
-                                We do not ship to Vermont; however, we do offer local delivery and winery pickup. After you place your order for local delivery and winery pickup, email me to make arrangements for pickup or delivery
+                                We do not ship to Vermont; however, we do offer winery pickup. After you place your order for local delivery, email me to make arrangements for pickup
                             </li>
                             <li>
                                 For any questions please contact us directly, <a href="mailto:dkbecker@montpeliervineyards.com">dkbecker@montpeliervineyards.com</a>
