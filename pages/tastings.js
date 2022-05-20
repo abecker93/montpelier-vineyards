@@ -4,6 +4,7 @@ import React from 'react';
 import Layout from '../components/utils/Layout'
 import { gql, GraphQLClient } from 'graphql-request'
 import cx from 'classnames'
+import moment from 'moment';
 
 const Tastings = (props) => {
 
@@ -39,7 +40,7 @@ const Tastings = (props) => {
                                         className="flex items-stretch"
                                     >
                                         <h4
-                                            className={cx("text-marv text-xl self-center")}
+                                            className="text-marv text-xl self-center"
                                         >{event?.eventTitle}</h4>
                                     </div>
                                     <div
@@ -63,7 +64,7 @@ const Tastings = (props) => {
                                         <div className="pt-1 text-marv font-bold leading-8">
                                             Date and Time:
                                             <span className="ml-1 text-black font-normal">
-                                                {event?.dateAndTime}
+                                                {moment(event?.dateAndTime).format('lll')}
                                             </span>
                                         </div>
                                 </div>
