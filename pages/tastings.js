@@ -1,4 +1,5 @@
 // page for tastings information, right now just placeholder
+// page for tastings information, right now just placeholder
    
 import React from 'react';
 import Layout from '../components/utils/Layout'
@@ -18,7 +19,7 @@ const Tastings = (props) => {
                 <div
                     className="text-lg xl:text-2xl 2xl:text-3xl text-marv pt-5 text-center"
                 >
-                    Want to try before you buy? Stop by one of these wine tastings to find out what you like best
+                    Interested in trying before you buy? Stop by one of these wine tastings to find out what you like best
                 </div>
                 <div
                         className="font-normal text-lg text-black leading-8 pt-2"
@@ -77,6 +78,8 @@ const Tastings = (props) => {
                         )
                     })}
                 </section>
+            </Layout>
+        </React.Fragment>
     )
 }
 
@@ -102,4 +105,4 @@ export async function getServerSideProps(context) {
     }
 }
 
-export default Tastings
+export default Tastings   
