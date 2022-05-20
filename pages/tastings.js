@@ -18,14 +18,14 @@ const Tastings = (props) => {
                 <div
                     className="text-lg xl:text-2xl 2xl:text-3xl text-marv pt-5 text-center"
                 >
-                    Drink some wine you dirty wine sluts!
+                    Interested in trying before you buy? Stop by one of these wine tastings to find out what you like best
                 </div>
                 <div
                     className="pt-5"
                 >
                     <img
-                        src="https://media.graphcms.com/output=format:jpg/URsR4QRUQ9ujFDYHZsoJ?_ga=2.251210438.190919827.1634691739-722458239.1630371733"
-                        alt="Montpelier Vineyards — group photo, picking grapes"
+                        src="https://media.graphcms.com/output=format:jpg/cl3eksrven80y0ck6nex2mhdb?_ga=2.251210438.190919827.1634691739-722458239.1630371733"
+                        alt="A selection of wines and meads. Doesn't it look good?"
                         className="mx-auto h-96"
                     />
                 </div>
