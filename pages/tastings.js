@@ -31,11 +31,17 @@ const Tastings = (props) => {
                 <section
                     className="pt-16 grid grid-cols-1 lg:grid-cols-2 gap-16 pb-20"
                 >
-                    {events?.map((event) => {
+                    {events.length > 0 ?
+                        events?.map((event) => {
                         return (
                             <Event event={event} /> 
                         )
-                    })}
+                    })
+                        :
+                    <div
+                        className="text-3xl"
+                    >Sorry, no upcoming events at this moment.</div>
+                    }
                 </section>
             </Layout>
         </React.Fragment>
