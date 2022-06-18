@@ -29,22 +29,18 @@ const Tastings = (props) => {
                 <section
                     className="pt-16 grid grid-cols-1 lg:grid-cols-2 gap-16 pb-20"
                 >
-                    {events.length > 0 ?
+                    {events.length > 0 && events?.map((event) => moment(event?.dateAndTime).isAfter()).length > 1 ?
                         events?.map((event) => {
                             if (moment(event?.dateAndTime).isAfter()) {
-                                return <Event event={event} /> 
+                                return <Event event={event} />
                             } else {
-                                return (
-                                    <div
-                                        className="text-3xl"
-                                    >Sorry, no upcoming events at this moment.</div>
-                                )
+                                return null
                             }
-                    })
+                        })
                         :
-                    <div
-                        className="text-3xl"
-                    >Sorry, no upcoming events at this moment.</div>
+                        <div
+                            className="text-3xl"
+                        >Sorry, no upcoming events at this moment.</div>
                     }
                 </section>
             </Layout>
