@@ -2,7 +2,7 @@ const LocationIcon = () => {
 
     return (
         <svg xmlns="http://www.w3.org/2000/svg"
-            className="h-7 w-7"
+            className="location-icon"
             viewBox="0 0 20 20"
             fill="currentColor"
         >

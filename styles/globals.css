@@ -55,3 +55,7 @@ a {
     height: 100rem;
   }
 }
+
+.location-icon {
+  max-width: 35px;
+}
