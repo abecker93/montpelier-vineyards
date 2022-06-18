@@ -65,6 +65,13 @@ const NavBar = (props) => {
                                     className="pl-5 lg:pl-10"
                                 >Shop Now</a>
                             </Link>
+                            <Link
+                                href="/tastings"
+                            >
+                                <a
+                                    className="pl-5 lg:pl-10"
+                                >Tastings</a>
+                            </Link>
                     </span>
                     <span
                         className="self-center absolute right-5 z-50"
