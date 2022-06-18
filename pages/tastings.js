@@ -1,10 +1,9 @@
 // page for tastings information, right now just placeholder
-   
+
 import React from 'react';
 import Layout from '../components/utils/Layout'
 import { gql, GraphQLClient } from 'graphql-request'
-import cx from 'classnames'
-import moment from 'moment';
+import Event from '../components/utils/Event'
 
 const Tastings = (props) => {
 
@@ -34,41 +33,7 @@ const Tastings = (props) => {
                 >
                     {events?.map((event) => {
                         return (
-                            <>
-                                <div className="items-stretch">
-                                    <div
-                                        className="flex items-stretch"
-                                    >
-                                        <h4
-                                            className="text-marv text-xl self-center"
-                                        >{event?.eventTitle}</h4>
-                                    </div>
-                                    <div
-                                        className="pt-2"
-                                    >
-                                        <div className="text-marv font-bold leading-8 flex">Description:
-                                            <p
-                                                className="ml-1 text-black font-normal"
-                                            >
-                                                {event?.eventDescription}
-                                            </p>
-                                        </div>
-                                        <div className="text-marv font-bold leading-8 flex">Address:
-                                            <p
-                                                className="ml-1 text-black font-normal"
-                                            >
-                                                <span>{event?.address}</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                        <div className="pt-1 text-marv font-bold leading-8">
-                                            Date and Time:
-                                            <span className="ml-1 text-black font-normal">
-                                                {moment(event?.dateAndTime).format('lll')}
-                                            </span>
-                                        </div>
-                                </div>
-                            </>
+                            <Event event={event} /> 
                         )
                     })}
                 </section>
