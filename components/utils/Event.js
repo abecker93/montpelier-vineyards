@@ -18,7 +18,7 @@ const Event = ({ event }) => {
                     <span
                         className="ml-5 text-2xl"
                     >
-                        {moment(event?.dateAndTime).format('D') + ", "+ moment(event?.dateAndTime).format('YYYY')}
+                        {moment(event?.dateAndTime).format('D') + ", "+ moment(event?.dateAndTime).format('YYYY') + " — " + moment(event?.dateAndTime).format('hh:mm a')}
                     </span>
                 </div>
                 <div>
