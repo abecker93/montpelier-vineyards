@@ -1,6 +1,4 @@
-// page for tastings information, right now just placeholder
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Layout from '../components/utils/Layout'
 import { gql, GraphQLClient } from 'graphql-request'
 import Event from '../components/utils/Event'
@@ -10,18 +8,6 @@ const Tastings = (props) => {
     const {
         events
     } = props
-
-    const [upcomingEvents, setUpcomingEvents] = useState(events)
-    
-    useEffect(() => {
-
-        let onlyUpcoming = []
-
-        for (const event of events) {
-            console.log(moment(event?.dateAndTime).format('llll'))
-        }
-        setUpcomingEvents(events)
-    })
 
     return (
         <React.Fragment>
@@ -43,11 +29,17 @@ const Tastings = (props) => {
                 <section
                     className="pt-16 grid grid-cols-1 lg:grid-cols-2 gap-16 pb-20"
                 >
-                    {upcomingEvents.length > 0 ?
-                        upcomingEvents?.map((event) => {
-                        return (
-                            <Event event={event} /> 
-                        )
+                    {events.length > 0 ?
+                        events?.map((event) => {
+                            if (moment(event?.dateAndTime).isAfter()) {
+                                return <Event event={event} /> 
+                            } else {
+                                return (
+                                    <div
+                                        className="text-3xl"
+                                    >Sorry, no upcoming events at this moment.</div>
+                                )
+                            }
                     })
                         :
                     <div
