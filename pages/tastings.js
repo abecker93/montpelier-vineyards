@@ -10,7 +10,8 @@ const Tastings = (props) => {
     } = props
 
     return (
-        <React.Fragment>
+<React.Fragment>
+            <Layout>
                 <div
                     className="text-lg xl:text-2xl 2xl:text-3xl text-marv pt-5 text-center"
                 >
