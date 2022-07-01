@@ -139,6 +139,13 @@ const NavBar = (props) => {
                                                     </li>
                                                     <li className="pt-3">
                                                         <Link
+                                                            href="/tastings"
+                                                        >
+                                                            <a>Tastings</a>
+                                                        </Link>
+                                                    </li>
+                                                    <li className="pt-3">
+                                                        <Link
                                                             href="https://vinoshipper.com/shop/montpelier_vineyards_llc"
                                                         >
                                                             <a>Shop Now</a>
