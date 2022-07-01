@@ -28,7 +28,7 @@ const Tastings = (props) => {
                     <img
                         src="https://media.graphassets.com/output=format:jpg/cgTBHUIQISYIcvSv2r3A?_ga=2.251210438.190919827.1634691739-722458239.1630371733"
                         alt="A selection of wines and meads. Doesn't it look good?"
-                        className="mx-auto h-96"
+                        className="mx-auto w-full"
                     />
                 </div>
                 <section
