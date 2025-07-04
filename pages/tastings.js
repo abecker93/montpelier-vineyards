@@ -18,11 +18,6 @@ const Tastings = (props) => {
                     Interested in trying before you buy? Stop by one of these wine tastings to find out what you like best
                 </div>
                 <div
-                        className="font-normal text-lg text-black leading-8 pt-2"
-                >
-                Tastings and tours are not being offered on premises at this time. Once this changes, on-site tastings and vineyard tours will be offered by appointment only. Interested in a free tasting? Check out the options below!
-                </div>
-                <div
                     className="pt-5"
                 >
                     <img
