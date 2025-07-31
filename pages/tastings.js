@@ -18,11 +18,6 @@ const Tastings = (props) => {
                     Interested in trying before you buy? Stop by one of these wine tastings to find out what you like best
                 </div>
                 <div
-                        className="font-normal text-lg text-black leading-8 pt-2 text-center"
-                >
-                    On-Site tastings offered most Saturdays from 1-5 Summer 2025, stop by at your convenience!
-                </div>
-                <div
                     className="pt-5"
                 >
                     <img
