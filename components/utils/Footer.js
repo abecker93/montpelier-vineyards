@@ -122,7 +122,7 @@ const Footer = () => {
                                 </div>
                             </section>
                             <section
-            className="flex items-center justify-center gap-6 md:pt-5">
+            className="flex items-center justify-center gap-10 pt-6 md:pt-8">
             <Link href="http://www.vermontgrapeandwinecouncil.com/">
                 <a 
                     target="_blank"
