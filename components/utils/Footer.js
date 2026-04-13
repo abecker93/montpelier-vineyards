@@ -161,8 +161,14 @@ const Footer = () => {
                     />
                 </a>
             </Link>
+                </section>
+
+                <div className="text-black text-center font-normal pt-5">
+                    ©Montpelier Vineyards 2022
+                </div>
+            </Layout>
         </section>
-    )
+    );
 }
 
-export default Footer
+export default Footer;
