@@ -143,21 +143,6 @@ const Footer = () => {
                             </a>
                         </Link>
                         <Link
-                            href="http://www.vermontfresh.net/" 
-                        >    
-                            <a 
-                                alt="Vermont Fresh"
-                                target="_blank"
-                                rel="noreferrer noopener"
-                            >
-                                <img
-                                src="https://media.graphcms.com/output=format:jpg/FU1jNGsSRyKj4981mMkY?_ga=2.212780436.1804149618.1633573467-722458239.1630371733"
-                                className="w-20 pt-5 md:pt-0"
-                                alt="Vermont Fresh Network logo"
-                                />
-                            </a>
-                        </Link>
-                        <Link
                             href="https://nofavt.org/"
                         >
                             <a 
