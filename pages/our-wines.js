@@ -24,7 +24,7 @@ const OurWines = (props) => {
                     <img
                         src="https://us-east-1.graphassets.com/AWxF0qBdS8y0dm0Wg5V2gz/URsR4QRUQ9ujFDYHZsoJ"
                         alt="Montpelier Vineyards — group photo, picking grapes"
-                        className="mx-auto max-h-80 w-full object-cover"
+                        className="mx-auto max-h-80 w-full object-contain"
                     />
                 </div>
                 <section
