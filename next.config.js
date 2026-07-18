@@ -1,7 +1,8 @@
 module.exports = {
   images: {
     domains: [
-      'media.graphcms.com',
+      'media.graphassets.com',
+      'us-east-1.graphassets.com',
     ]
   },
   // reactStrictMode: true,

@@ -19,7 +19,7 @@ export default function Home() {
           className=""
         >
           <img
-            src="https://media.graphcms.com/output=format:jpg/z9VlYsMsTzi7uaCNtb3X?_ga=2.221629464.1804149618.1633573467-722458239.1630371733"
+            src="https://media.graphassets.com/output=format:jpg/z9VlYsMsTzi7uaCNtb3X"
             alt="Montpelier Vineyards — group photo, picking grapes"
             className="mx-auto w-full"
           />
@@ -51,7 +51,7 @@ export default function Home() {
           <div>
             <div className="pt-8 lg:pt-0">
               <img
-                src="https://media.graphcms.com/output=format:jpg/pIWEC2dLSTuo5Py1SKUM?_ga=2.211774485.1804149618.1633573467-722458239.1630371733"
+                src="https://us-east-1.graphassets.com/AWxF0qBdS8y0dm0Wg5V2gz/pIWEC2dLSTuo5Py1SKUM"
                 alt="Petite Pearl going through veraison"
               />
             </div>
@@ -59,14 +59,14 @@ export default function Home() {
               className="pt-8"
             >
               <img
-                src="https://media.graphcms.com/Hmub3ZL6Rbu10cXKf4iR"
+                src="https://us-east-1.graphassets.com/AWxF0qBdS8y0dm0Wg5V2gz/Hmub3ZL6Rbu10cXKf4iR"
                 alt="Wine tasting event"
               />
             </div>
           </div>
           <div className="pt-8 lg:pt-0">
             <img
-              src="https://media.graphcms.com/output=format:jpg/S9kULbybQMizPUr9O1Tp?_ga=2.186624297.1804149618.1633573467-722458239.1630371733"
+              src="https://us-east-1.graphassets.com/AWxF0qBdS8y0dm0Wg5V2gz/S9kULbybQMizPUr9O1Tp"
               alt="Montpelier Vineyards — Sparkling Wine"
             />
           </div>

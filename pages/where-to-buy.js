@@ -2,7 +2,8 @@ import React from 'react';
 import Layout from '../components/utils/Layout'
 // import DomShipping from '../components/utils/DomShipping'
 import PurchaseLocations from '../components/utils/PurchaseLocations'
-import { gql, GraphQLClient } from 'graphql-request'
+import { gql } from 'graphql-request'
+import { client } from '../components/utils/Gql'
 import Link from 'next/link'
 
 const WhereToBuy = (props) => {
@@ -135,11 +136,6 @@ const WhereToBuy = (props) => {
 }
 
 export async function getServerSideProps(context) {
-
-    // const client = new GraphQLClient('https://api-us-east-1.graphcms.com/v2/cku68bqqj27iv01xn6g6se7dc/master')
-    const client = new GraphQLClient(process.env.GRAPH_CMS_API_ENDPOINT)
-
-    // query PurchaseLocations() {
     const query = gql`
         query {
         purchaseLocations{
@@ -156,7 +152,6 @@ export async function getServerSideProps(context) {
         }
     }`
     
-    // const data = await graphClient.request(query)
     const data = await client.request(query)
 
     const locations = data.purchaseLocations

@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/utils/Layout'
-import { gql, GraphQLClient } from 'graphql-request'
+import { gql } from 'graphql-request'
+import { client } from '../components/utils/Gql'
 import cx from 'classnames'
 
 const OurWines = (props) => {
@@ -21,7 +22,7 @@ const OurWines = (props) => {
                     className="pt-5"
                 >
                     <img
-                        src="https://media.graphcms.com/output=format:jpg/URsR4QRUQ9ujFDYHZsoJ?_ga=2.251210438.190919827.1634691739-722458239.1630371733"
+                        src="https://us-east-1.graphassets.com/AWxF0qBdS8y0dm0Wg5V2gz/URsR4QRUQ9ujFDYHZsoJ"
                         alt="Montpelier Vineyards — group photo, picking grapes"
                         className="mx-auto h-96"
                     />
@@ -122,9 +123,6 @@ const OurWines = (props) => {
 
 // export async function getStaticProps(context) {
 export async function getServerSideProps(context) {
-
-    const client = new GraphQLClient(process.env.GRAPH_CMS_API_ENDPOINT)
-
     const query = gql`
         query {
             wines {

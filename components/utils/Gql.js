@@ -1,2 +1,3 @@
 import { GraphQLClient } from 'graphql-request'
-export const client = new GraphQLClient(process.env.GRAPHCMS_API_ENDPOINT);
+const endpoint = process.env.HYGRAPH_API_ENDPOINT || process.env.GRAPH_CMS_API_ENDPOINT
+export const client = new GraphQLClient(endpoint);

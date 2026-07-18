@@ -1,7 +1,8 @@
 import React from 'react';
 import Layout from '../components/utils/Layout'
-import { gql, GraphQLClient } from 'graphql-request'
+import { gql } from 'graphql-request'
 import Event from '../components/utils/Event'
+import { client } from '../components/utils/Gql'
 
 const Tastings = (props) => {
     const {
@@ -20,7 +21,7 @@ const Tastings = (props) => {
                     className="pt-5"
                 >
                     <img
-                        src="https://media.graphassets.com/output=format:jpg/cgTBHUIQISYIcvSv2r3A?_ga=2.251210438.190919827.1634691739-722458239.1630371733"
+                        src="https://us-east-1.graphassets.com/AWxF0qBdS8y0dm0Wg5V2gz/cgTBHUIQISYIcvSv2r3A"
                         alt="A selection of wines and meads. Doesn't it look good?"
                         className="mx-auto w-full"
                     />
@@ -33,7 +34,7 @@ const Tastings = (props) => {
                         :
                         <div
                             className="text-3xl"
-                        >Sorry, no upcoming events at this moment.</div>
+                        >There aren't any currently scheduled tastings, but feel free to contact us to schedule one for yourself!</div>
                     }
                 </section>
             </Layout>
@@ -43,9 +44,6 @@ const Tastings = (props) => {
 
 
 export async function getServerSideProps(context) {
-
-    const client = new GraphQLClient(process.env.GRAPH_CMS_API_ENDPOINT)
-
     const query = gql`
         query UpcomingEvents($now: DateTime!) {
             events(stage: PUBLISHED, where: {dateAndTime_gt: $now}, orderBy: dateAndTime_ASC) {

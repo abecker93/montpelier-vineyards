@@ -25,7 +25,7 @@ const About = () => {
                         </div>
                     </div>
                     <img
-                        src="https://media.graphcms.com/LkNJP9FRACGrr6eyPxEb"
+                        src="https://us-east-1.graphassets.com/AWxF0qBdS8y0dm0Wg5V2gz/LkNJP9FRACGrr6eyPxEb"
                         alt="Montpelier Vineyards — squishing grapes"
                         className="md:w-2/5 md:pl-8 mx-auto"
                     />
