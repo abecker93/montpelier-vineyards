@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '../components/utils/Layout'
 import { gql, GraphQLClient } from 'graphql-request'
 import Event from '../components/utils/Event'
-import moment from 'moment'
 
 const Tastings = (props) => {
     const {
@@ -29,14 +28,8 @@ const Tastings = (props) => {
                 <section
                     className="pt-16 grid grid-cols-1 lg:grid-cols-2 gap-16 pb-20"
                 >
-                    {events.length > 0 && events?.map((event) => moment(event?.dateAndTime).isAfter()).length > 1 ?
-                        events?.map((event) => {
-                            if (moment(event?.dateAndTime).isAfter()) {
-                                return <Event event={event} />
-                            } else {
-                                return null
-                            }
-                        })
+                    {events.length > 0 ?
+                        events.map((event) => <Event key={event.id} event={event} />)
                         :
                         <div
                             className="text-3xl"
@@ -54,16 +47,20 @@ export async function getServerSideProps(context) {
     const client = new GraphQLClient(process.env.GRAPH_CMS_API_ENDPOINT)
 
     const query = gql`
-        query {
-            events {
+        query UpcomingEvents($now: DateTime!) {
+            events(stage: PUBLISHED, where: {dateAndTime_gt: $now}, orderBy: dateAndTime_ASC) {
+                id
                 eventTitle
                 eventDescription
                 dateAndTime
                 address
+                eventPhoto {
+                    url
+                }
             }
         }`
 
-    const data = await client.request(query)
+    const data = await client.request(query, { now: new Date().toISOString() })
 
     return {
         props: data
