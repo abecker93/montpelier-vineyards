@@ -5,80 +5,63 @@ import { MenuIcon, XIcon } from '@heroicons/react/solid'
 
 import Layout from './Layout'
 
-const NavBar = (props) => {
+const links = [
+    { href: '/', label: 'Home' },
+    { href: '/our-wines', label: 'Our Wines' },
+    { href: '/where-to-buy', label: 'Where to Buy' },
+    { href: '/about', label: 'About' },
+    { href: 'https://vinoshipper.com/shop/montpelier_vineyards_llc', label: 'Shop Now' },
+    { href: '/tastings', label: 'Tastings' },
+]
+
+const NavLink = ({ href, children, className = '' }) => {
+    if (href.startsWith('http')) {
+        return <a className={className} href={href}>{children}</a>
+    }
+
+    return (
+        <Link href={href}>
+            <a className={className}>{children}</a>
+        </Link>
+    )
+}
+
+const NavBar = () => {
 
     const [showMenu, setShowMenu] = useState(false)
 
     return (
         <React.Fragment>
             <Layout>
-            <div
-                className="py-5 flex items-stretch content-center"
-            >
-                <div
-                    className="flex items-stretch content-center xl:justify-between"
+                <header
+                    className="py-5 flex items-center justify-between"
                 >
                     <Link href="/">
                         <a
-                            className="w-8/12 md:w-1/4 cursor-pointer"
+                            className="w-64 max-w-xs cursor-pointer"
                         >
                             <img
-                                
                                 src="/Montpelier_Vinyards_logo.svg"
                                 alt="Montpelier Vineyards logo"
                             />
                         </a>
                     </Link>
-                    <span
-                        className="md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-marv self-center absolute  md:right-5 lg:right-16 xl:relative xl:right-0 hidden md:inline"
+
+                    <nav
+                        className="hidden lg:flex items-center gap-8 text-xl text-marv"
                     >
-                            <Link
-                                href="/"
-                            >
-                                <a>Home</a>
-                            </Link>
-                            <Link
-                                href="/our-wines"
-                            >
-                                <a
-                                    className="pl-5 lg:pl-10"
-                                >Our Wines</a>
-                            </Link>
-                            <Link
-                                href="/where-to-buy"
-                            >
-                                <a
-                                    className="pl-5 lg:pl-10"
-                                >Where to Buy</a>
-                            </Link>
-                            <Link
-                                href="/about"
-                            >
-                                <a
-                                    className="pl-5 lg:pl-10"
-                                >About</a>
-                            </Link>
-                            <Link
-                                href="https://vinoshipper.com/shop/montpelier_vineyards_llc"
-                            >
-                                <a
-                                    className="pl-5 lg:pl-10"
-                                >Shop Now</a>
-                            </Link>
-                            <Link
-                                href="/tastings"
-                            >
-                                <a
-                                    className="pl-5 lg:pl-10"
-                                >Tastings</a>
-                            </Link>
-                    </span>
-                    <span
-                        className="self-center absolute right-5 z-50"
-                    >
+                        {links.map((link) => (
+                            <NavLink key={link.href} href={link.href}>
+                                {link.label}
+                            </NavLink>
+                        ))}
+                    </nav>
+
+                    <div className="lg:hidden">
                         <button
                             onClick={() => setShowMenu(!showMenu)}
-                            className="text-marv w-8 h-8 md:hidden"
+                            className="text-marv w-8 h-8"
+                            aria-label={showMenu ? 'Close menu' : 'Open menu'}
                         >
                             {showMenu ?
                                 <XIcon/>
@@ -86,81 +69,31 @@ const NavBar = (props) => {
                                 <MenuIcon/>
                             }
                         </button>
-                    </span>
-                </div>
-            </div>
-            <span
-                    className="navbar block md:hidden self-center relative mx-auto"
-                    >
-                            {showMenu ?
-                            <Transition
-                                    show={showMenu}
-                                    as="div"
-                                    enter="transition ease-out duration-200"
-                                    enterFrom="opacity-0 translate-y-1"
-                                    enterTo="opacity-100 translate-y-0"
-                                    leave="transition ease-in duration-150"
-                                    leaveFrom="opacity-100 translate-y-0"
-                                    leaveTo="opacity-0 translate-y-1"
-                                >
-                                    <div
-                                        className="relative mx-auto w-[320px]"
-                                    >
-                                        <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 mx-10">
-                                            <div className="relative bg-white p-7">
-                                                <ul>
-                                                    <li>
-                                                        <Link
-                                                            href="/"
-                                                        >
-                                                            <a>Home</a>
-                                                        </Link>
-                                                    </li>
-                                                    <li className="pt-3">
-                                                        <Link
-                                                            href="/our-wines"
-                                                        >
-                                                            <a>Our Wines</a>
-                                                        </Link>
-                                                    </li>
-                                                    <li className="pt-3">
-                                                        <Link
-                                                            href="/where-to-buy"
-                                                        >
-                                                            <a>Where to Buy</a>
-                                                        </Link>
-                                                    </li>
-                                                    <li className="pt-3">
-                                                        <Link
-                                                            href="/about"
-                                                        >
-                                                            <a>About</a>
-                                                        </Link>
-                                                    </li>
-                                                    <li className="pt-3">
-                                                        <Link
-                                                            href="/tastings"
-                                                        >
-                                                            <a>Tastings</a>
-                                                        </Link>
-                                                    </li>
-                                                    <li className="pt-3">
-                                                        <Link
-                                                            href="https://vinoshipper.com/shop/montpelier_vineyards_llc"
-                                                        >
-                                                            <a>Shop Now</a>
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
                                     </div>
-                                </Transition>
-                            : null}
-                    </span>
-                    <h4
-                        className="text-center text-lg xl:text-2xl 2xl:text-3xl text-marv"
-                    >“Healthy soil, vigorous vines, spirited wines”</h4>
+                </header>
+
+                <Transition
+                    show={showMenu}
+                    as="nav"
+                    enter="transition ease-out duration-200"
+                    enterFrom="opacity-0 translate-y-1"
+                    enterTo="opacity-100 translate-y-0"
+                    leave="transition ease-in duration-150"
+                    leaveFrom="opacity-100 translate-y-0"
+                    leaveTo="opacity-0 translate-y-1"
+                >
+                    <ul className="lg:hidden bg-white bg-opacity-70 text-marv text-xl leading-10 p-5 mb-5">
+                        {links.map((link) => (
+                            <li key={link.href}>
+                                <NavLink href={link.href}>{link.label}</NavLink>
+                            </li>
+                        ))}
+                    </ul>
+                </Transition>
+
+                <h4
+                    className="text-center text-lg xl:text-2xl text-marv"
+                >“Healthy soil, vigorous vines, spirited wines”</h4>
             </Layout>
         </React.Fragment>
     )

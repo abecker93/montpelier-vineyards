@@ -24,25 +24,22 @@ const WhereToBuy = (props) => {
                     </div>
                 </section>
                 <section
-                    className="text-marv text-xl grid md:grid-cols-3 justify-items-center pb-5"
+                    className="text-marv text-xl flex flex-col md:flex-row justify-center gap-3 md:gap-10 text-center pb-8"
                 >
                     <Link
                         href="/where-to-buy#retail"
                     >
-                        <a
-                        >Restaurants & Retailers</a>
+                        <a>Restaurants & Retailers</a>
                     </Link>
                     <Link
                         href="/where-to-buy#local"
                     >
-                        <a
-                        >Local Pickup</a>
+                        <a>Local Pickup</a>
                     </Link>
                     <Link
                         href="/where-to-buy#ship"
                     >
-                        <a
-                        >Domestic Shipping</a>
+                        <a>Domestic Shipping</a>
                     </Link>
                 </section>
                 <section
@@ -67,20 +64,10 @@ const WhereToBuy = (props) => {
                     >
                         If you would like to order wine for pick up here at the winery, click on the buy wine button choose pick-up
                     </div>
-                    <Link
+                    <a
                         href="https://vinoshipper.com/shop/montpelier_vineyards_llc"
-                    >
-                        <a
-                            className="flex justify-center py-2"
-                            passHref
-                        >
-                            <button
-                                className="bg-marv text-beige py-1.5 2xl:py-2 px-4 rounded-full text-lg 2xl:text-2xl"
-                            >
-                                Shop now with VinoShipper
-                            </button>
-                        </a>
-                    </Link>
+                        className="inline-block mt-4 bg-marv text-beige py-1.5 2xl:py-2 px-4 rounded-full text-lg 2xl:text-2xl"
+                    >Shop now with VinoShipper</a>
                 </section>
                 <section id="ship" className="pt-5 pb-20">
                     <h2

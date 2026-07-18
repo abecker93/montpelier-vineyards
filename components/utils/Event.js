@@ -19,8 +19,7 @@ const Event = ({ event }) => {
     }).format(eventDate)
 
     return (
-        <>
-            <div className="items-stretch md:flex md:gap-8">
+        <article className="py-10 border-t border-marv border-opacity-25 md:flex md:gap-8">
                 {event?.eventPhoto?.url && (
                     <img
                         src={event.eventPhoto.url}
@@ -30,7 +29,7 @@ const Event = ({ event }) => {
                 )}
                 <div className="flex-1">
                 <div
-                    className="flex items-end text-marv"
+                    className="flex flex-wrap items-end text-marv"
                 >
                     <h2
                         className="text-3xl font-medium uppercase"
@@ -60,14 +59,13 @@ const Event = ({ event }) => {
                 <div className="text-marv flex items-center">
                     <LocationIcon />
                     <p
-                        className="ml-1 text-black font-normal text-lg"
+                        className="ml-2 text-black font-normal text-lg"
                     >
                         <span>{event?.address}</span>
                     </p>
                 </div>
                 </div>
-            </div>
-        </>
+        </article>
     )
 }
 

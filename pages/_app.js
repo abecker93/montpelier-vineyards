@@ -18,10 +18,8 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <NavBar/>
-    {/* <section
-      className="max-h-full"
-    > */}
       <Component {...pageProps} />
+      <Footer/>
     </>
   )
 }

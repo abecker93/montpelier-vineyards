@@ -24,19 +24,20 @@ const OurWines = (props) => {
                     <img
                         src="https://us-east-1.graphassets.com/AWxF0qBdS8y0dm0Wg5V2gz/URsR4QRUQ9ujFDYHZsoJ"
                         alt="Montpelier Vineyards — group photo, picking grapes"
-                        className="mx-auto h-96"
+                        className="mx-auto max-h-80 w-full object-cover"
                     />
                 </div>
                 <section
-                    className="pt-16 grid grid-cols-1 lg:grid-cols-2 gap-16 pb-20"
+                    className="pt-10 pb-20 divide-y divide-marv divide-opacity-25"
                 >
                     {wines?.map((wine) => {
                         return (
-                            <>
-                                <div className="items-stretch">
-                                    <div
-                                        className="flex items-stretch"
-                                    >
+                            <article
+                                key={wine.id}
+                                className="py-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+                            >
+                                <div>
+                                    <div className="flex items-center">
                                         {wine.organicBool && (
                                             <img
                                                 src="vt-certified-organic.gif"
@@ -45,58 +46,47 @@ const OurWines = (props) => {
                                             />
                                         )}
                                         <h4
-                                            className={cx("text-marv text-xl self-center", {
+                                            className={cx("text-marv text-2xl leading-8", {
                                                 ['pl-4']: wine?.organicBool
                                             })}
                                         >{wine?.wineName}</h4>
                                     </div>
-                                    <div
-                                        className="pt-2 flex"
-                                    >
-                                        <div className="text-marv font-bold leading-8 flex">Alcohol:
-                                            <p
-                                                className="ml-1 text-black font-normal"
-                                            >
+                                    <div className="pt-3 flex flex-wrap gap-x-6 gap-y-1">
+                                        <div className="text-marv font-bold leading-8">
+                                            Alcohol:
+                                            <span className="ml-1 text-black font-normal">
                                                 {wine?.alcohol}
-                                            </p>
+                                            </span>
                                         </div>
-                                        <div className="ml-1 text-marv font-bold leading-8 flex">Type:
-                                            <p
-                                                className="ml-1 text-black font-normal"
-                                            >
-                                                <span>{wine?.beverageType.join(", ")}</span>
-                                            </p>
+                                        <div className="text-marv font-bold leading-8">
+                                            Type:
+                                            <span className="ml-1 text-black font-normal">
+                                                {wine?.beverageType?.join(", ")}
+                                            </span>
                                         </div>
                                     </div>
-                                        <div className="pt-1 text-marv font-bold leading-8">
+                                    <div className="pt-2 space-y-4">
+                                        <p className="text-marv font-bold leading-8">
                                             Variety:
                                             <span className="ml-1 text-black font-normal">
                                                 {wine?.grapeVariety}
                                             </span>
-                                        </div>
-                                        <div
-                                            className="pt-1 text-marv font-bold leading-8"
-                                        >
+                                        </p>
+                                        <p className="text-marv font-bold leading-8">
                                             Winemaking notes:
-                                            <span
-                                                className="ml-1 text-black font-normal"
-                                            >
+                                            <span className="ml-1 text-black font-normal">
                                                 {wine?.winemakingNotes}
                                             </span>
+                                        </p>
+                                        <p className="text-marv font-bold leading-8">
+                                            Tasting notes:
+                                            <span className="ml-1 text-black font-normal">
+                                                {wine?.tastingNotes}
+                                            </span>
+                                        </p>
                                     </div>
-                                    <div
-                                        className="pt-1 text-marv font-bold leading-8"
-                                    >
-                                        Tasting notes:
-                                        <span
-                                            className="ml-1 text-black font-normal"
-                                        >
-                                            {wine?.tastingNotes}
-                                        </span>
-                                    </div>
-                                    <div
-                                        className="pt-2"
-                                    >
+                                    {wine?.techSheet?.url && (
+                                    <div className="pt-6">
                                         <a
                                             className="bg-marv text-beige py-1.5 2xl:py-2 px-4 rounded-full text-lg 2xl:text-2xl"
                                             href={wine?.techSheet?.url}
@@ -104,15 +94,18 @@ const OurWines = (props) => {
                                             rel="noreferrer noopener"
                                         >Download the tech sheet</a>
                                     </div>
+                                    )}
                                 </div>
                                 <div className="self-center">
+                                    {wine?.wineImage?.url && (
                                     <img
                                         src={wine?.wineImage?.url}
-                                        className="mx-auto h-96"
+                                        className="mx-auto max-h-96 w-full object-contain"
                                         alt={wine?.wineName}
                                     />
+                                    )}
                                 </div>
-                            </>
+                            </article>
                         )
                     })}
                 </section>

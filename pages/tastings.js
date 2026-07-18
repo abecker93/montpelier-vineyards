@@ -27,13 +27,13 @@ const Tastings = (props) => {
                     />
                 </div>
                 <section
-                    className="pt-16 grid grid-cols-1 lg:grid-cols-2 gap-16 pb-20"
+                    className="pt-10 pb-20"
                 >
                     {events.length > 0 ?
                         events.map((event) => <Event key={event.id} event={event} />)
                         :
                         <div
-                            className="text-3xl"
+                            className="text-2xl text-center max-w-3xl mx-auto leading-9"
                         >There aren't any currently scheduled tastings, but feel free to contact us to schedule one for yourself!</div>
                     }
                 </section>
